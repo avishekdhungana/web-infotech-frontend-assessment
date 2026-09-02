@@ -4,42 +4,43 @@ import { useState } from 'react';
 
 const categories = [
   {
-    title: 'Business',
-    description: 'Tools & services to grow your company',
+    title: 'Home Services',
+    description: 'Verified experts for your household needs',
     color: 'from-blue-500/20 to-blue-600/5',
     iconBg: 'bg-blue-500/15 text-blue-400',
     icon: (
       <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.75">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
       </svg>
     ),
     items: [
-      { name: 'Accounting', desc: 'Bookkeeping & taxes' },
+      { name: 'Electrician', desc: 'Wiring & power repairs' },
+      { name: 'Plumber', desc: 'Pipes & leak fixes' },
+      { name: 'House Cleaner', desc: 'Deep cleaning & laundry' },
+      { name: 'HVAC Repair', desc: 'AC & heating services' },
+    ],
+  },
+  {
+    title: 'Professional',
+    description: 'Expert advice and learning support',
+    color: 'from-emerald-500/20 to-emerald-600/5',
+    iconBg: 'bg-emerald-500/15 text-emerald-400',
+    icon: (
+      <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.75">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+      </svg>
+    ),
+    items: [
+      { name: 'Home Tutor', desc: 'Academics & skills' },
       { name: 'Legal Services', desc: 'Contracts & compliance' },
       { name: 'Marketing', desc: 'Growth & branding' },
       { name: 'Consulting', desc: 'Strategy & advice' },
     ],
   },
   {
-    title: 'Individual',
-    description: 'Everyday services for your life',
-    color: 'from-emerald-500/20 to-emerald-600/5',
-    iconBg: 'bg-emerald-500/15 text-emerald-400',
-    icon: (
-      <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.75">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-      </svg>
-    ),
-    items: [
-      { name: 'Healthcare', desc: 'Doctors & wellness' },
-      { name: 'Travel', desc: 'Flights & stays' },
-      { name: 'Home Services', desc: 'Repairs & cleaning' },
-      { name: 'Education', desc: 'Courses & tutoring' },
-    ],
-  },
-  {
     title: 'Digital',
-    description: 'Tech & creative services',
+    description: 'Tech repairs and creative solutions',
     color: 'from-violet-500/20 to-violet-600/5',
     iconBg: 'bg-violet-500/15 text-violet-400',
     icon: (
@@ -48,14 +49,13 @@ const categories = [
       </svg>
     ),
     items: [
+      { name: 'Mobile Repair', desc: 'Screens & hardware' },
       { name: 'Web Development', desc: 'Sites & apps' },
-      { name: 'Technology', desc: 'IT & support' },
-      { name: 'Finance', desc: 'Payments & tools' },
+      { name: 'Technology', desc: 'IT & software support' },
       { name: 'Design', desc: 'UI/UX & branding' },
     ],
   },
 ];
-
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
