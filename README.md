@@ -1,41 +1,46 @@
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NexaServe — Service Platform
 
-## Getting Started
+A modern, responsive local-services marketplace homepage built with **Next.js, React, and Tailwind CSS**.
 
-First, run the development server:
+## 🔗 Links
+
+* **Live Demo:** https://web-infotech-frontend-assessment-seven.vercel.app/
+* **GitHub:** https://github.com/avishekdhungana/web-infotech-frontend-assessment
+
+## 🛠️ Tech Stack
+
+* Next.js (App Router)
+* React
+* Tailwind CSS
+* JavaScript / JSX
+* Lucide React
+* Vercel
+
+## ✨ Features
+
+* Responsive design
+* Desktop & mobile navigation
+* Interactive categories mega menu
+* Mobile menu
+* Service category cards
+* Search UI
+* Provider CTA section
+* Responsive footer
+* Hover animations and transitions
+
+## 💻 Run Locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚧 Note
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Search and newsletter forms are currently UI-only and are not connected to a backend/API.
 
-## Learn More
+## 👨‍💻 Project
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-=======
-# web-infotech-frontend-assessment
-Frontend Developer practical assessment for Web InfoTech Nepal — responsive information and service platform homepage.
->>>>>>> b33bf6ad5fd76b6ad4a2c390ed7ccc9c3f59d027
+Built as a **Frontend Developer practical assessment** to demonstrate responsive UI, reusable components, and interactive frontend development.
