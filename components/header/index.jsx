@@ -62,7 +62,7 @@ export default function Header() {
 
   return (
     <header className="relative border-b border-white/[0.07] bg-[#08090d] text-white">
-      <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8">
         <div className="flex items-center gap-3">
           <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-white text-[15px] font-bold text-black shadow-lg shadow-white/10">
             N
@@ -74,8 +74,8 @@ export default function Header() {
           {['Home', 'Services'].map((item) => (
             <a
               key={item}
-              href="#"
-              className="rounded-lg px-3.5 py-2 text-[13.5px] font-medium text-gray-400 transition-colors hover:bg-white/[0.05] hover:text-white"
+              href={item === 'Services' ? '/services' : '/'}
+              className="rounded-lg px-3.5 py-2 text-[13.5px] font-medium text-gray-400 transition-colors hover:bg-white/5 hover:text-white"
             >
               {item}
             </a>
@@ -86,8 +86,8 @@ export default function Header() {
             onClick={() => setMenuOpen(!menuOpen)}
             className={`flex items-center gap-1.5 rounded-lg px-3.5 py-2 text-[13.5px] font-medium transition-all ${
               menuOpen
-                ? 'bg-white/[0.08] text-white'
-                : 'text-gray-400 hover:bg-white/[0.05] hover:text-white'
+                ? 'bg-white/8 text-white'
+                : 'text-gray-400 hover:bg-white/5 hover:text-white'
             }`}
           >
             Categories
@@ -104,7 +104,7 @@ export default function Header() {
             <a
               key={item}
               href="#"
-              className="rounded-lg px-3.5 py-2 text-[13.5px] font-medium text-gray-400 transition-colors hover:bg-white/[0.05] hover:text-white"
+              className="rounded-lg px-3.5 py-2 text-[13.5px] font-medium text-gray-400 transition-colors hover:bg-white/5 hover:text-white"
             >
               {item}
             </a>
@@ -112,7 +112,7 @@ export default function Header() {
         </nav>
 
         <div className="hidden items-center gap-2 sm:flex">
-          <button className="rounded-lg px-3.5 py-2 text-[13.5px] font-medium text-gray-400 transition-colors hover:bg-white/[0.05] hover:text-white">
+          <button className="rounded-lg px-3.5 py-2 text-[13.5px] font-medium text-gray-400 transition-colors hover:bg-white/5 hover:text-white">
             Sign in
           </button>
           <button className="rounded-xl bg-white px-4 py-2 text-[13.5px] font-semibold text-black transition-all hover:bg-gray-100">
@@ -123,7 +123,7 @@ export default function Header() {
         <button
           type="button"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/[0.03] lg:hidden"
+          className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/3 lg:hidden"
         >
           {mobileMenuOpen ? (
             <svg className="h-4.5 w-4.5" viewBox="0 0 20 20" fill="none">
@@ -138,7 +138,7 @@ export default function Header() {
       </div>
 
       {menuOpen && (
-        <div className="absolute left-0 right-0 top-[72px] z-50 border-t border-white/[0.06] bg-[#0a0b10]/95 shadow-2xl shadow-black/60 backdrop-blur-2xl">
+        <div className="absolute left-0 right-0 top-18 z-50 border-t border-white/6 bg-[#0a0b10]/95 shadow-2xl shadow-black/60 backdrop-blur-2xl">
           <div className="mx-auto max-w-7xl px-5 py-9 sm:px-6 lg:px-8">
             <div className="mb-8 flex items-center justify-between">
               <div>
@@ -155,7 +155,7 @@ export default function Header() {
               {categories.map((cat) => (
                 <div
                   key={cat.title}
-                  className={`group relative overflow-hidden rounded-2xl border border-white/[0.08] bg-gradient-to-b ${cat.color} p-6 transition-all duration-300 hover:border-white/[0.16] hover:shadow-xl hover:shadow-black/40`}
+                  className={`group relative overflow-hidden rounded-2xl border border-white/8 bg-linear-to-b ${cat.color} p-6 transition-all duration-300 hover:border-white/16 hover:shadow-xl hover:shadow-black/40`}
                 >
                   <div className="mb-5 flex items-center gap-3.5">
                     <div className={`flex h-11 w-11 items-center justify-center rounded-xl ${cat.iconBg}`}>
@@ -172,7 +172,7 @@ export default function Header() {
                       <a
                         key={item.name}
                         href="#"
-                        className="flex items-center justify-between rounded-xl px-3 py-2.5 transition-all hover:bg-white/[0.06]"
+                        className="flex items-center justify-between rounded-xl px-3 py-2.5 transition-all hover:bg-white/6"
                       >
                         <div>
                           <p className="text-[13.5px] font-medium text-gray-200 group-hover:text-white">
@@ -201,7 +201,7 @@ export default function Header() {
         <nav className="border-t border-white/[0.07] bg-[#08090d] px-5 py-5 lg:hidden">
           <div className="flex flex-col gap-1">
             {['Home', 'Services'].map((item) => (
-              <a key={item} href="#" className="rounded-xl px-3.5 py-3 text-[14px] font-medium text-gray-300 hover:bg-white/[0.05]">
+              <a key={item} href="#" className="rounded-xl px-3.5 py-3 text-[14px] font-medium text-gray-300 hover:bg-white/5">
                 {item}
               </a>
             ))}
@@ -209,7 +209,7 @@ export default function Header() {
             <button
               type="button"
               onClick={() => setMenuOpen(!menuOpen)}
-              className="flex w-full items-center justify-between rounded-xl px-3.5 py-3 text-left text-[14px] font-medium text-gray-300 hover:bg-white/[0.05]"
+              className="flex w-full items-center justify-between rounded-xl px-3.5 py-3 text-left text-[14px] font-medium text-gray-300 hover:bg-white/5"
             >
               Categories
               <svg className={`h-4 w-4 transition-transform ${menuOpen ? 'rotate-180' : ''}`} viewBox="0 0 20 20" fill="none">
@@ -231,7 +231,7 @@ export default function Header() {
                       <a
                         key={item.name}
                         href="#"
-                        className="block rounded-lg px-2.5 py-2 text-[13.5px] text-gray-400 hover:bg-white/[0.05] hover:text-white"
+                        className="block rounded-lg px-2.5 py-2 text-[13.5px] text-gray-400 hover:bg-white/5 hover:text-white"
                       >
                         {item.name}
                       </a>
@@ -242,13 +242,13 @@ export default function Header() {
             )}
 
             {['Resources', 'About'].map((item) => (
-              <a key={item} href="#" className="rounded-xl px-3.5 py-3 text-[14px] font-medium text-gray-300 hover:bg-white/[0.05]">
+              <a key={item} href="#" className="rounded-xl px-3.5 py-3 text-[14px] font-medium text-gray-300 hover:bg-white/5">
                 {item}
               </a>
             ))}
 
             <div className="mt-5 space-y-2 border-t border-white/[0.07] pt-5">
-              <button className="w-full rounded-xl py-3 text-[14px] font-medium text-gray-300 hover:bg-white/[0.05]">
+              <button className="w-full rounded-xl py-3 text-[14px] font-medium text-gray-300 hover:bg-white/5">
                 Sign in
               </button>
               <button className="w-full rounded-xl bg-white py-3 text-[14px] font-semibold text-black">
