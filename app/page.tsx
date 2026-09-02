@@ -1,11 +1,17 @@
-import Header from "@/components/header";
-import Hero from "@/components/Hero"
+import Header from "../components/header/index";
+import Hero from "../components/Hero";
+import Services from "../components/Services";
+import CTA from "../components/CTA";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#080b12]">
+    <main>
       <Header />
       <Hero />
+      <Services />
+      <CTA />
+      <Footer />
     </main>
   );
 }
